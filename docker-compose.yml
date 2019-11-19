@@ -1,0 +1,22 @@
+version: '3'
+services:
+  backend:
+    build: ./api
+    restart: always
+    ports:
+      - 4000:4000
+    volumes:
+      - ./backend:/app/backend
+  frontend:
+    build: ./dashboard
+    volumes:
+      - ./frontend:/app
+      # One-way volume to use node_modules from inside image
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
+    command: npm start
