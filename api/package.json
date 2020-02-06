@@ -1,23 +1,23 @@
 {
-  "name": "api",
-  "version": "1.0.0",
-  "description": "Full Stack Engineer Challenge",
-  "main": "src/index.js",
-  "scripts": {
-    "knex": "knex",
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Kudakwashe Mupeni",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "knex": "^0.20.2",
-    "objection": "^1.6.11",
-    "objection-guid": "^3.0.2",
-    "sqlite3": "^4.1.0"
-  }
+    "name": "api",
+    "version": "1.0.1",
+    "description": "Full Stack Engineer Challenge",
+    "main": "src/index.js",
+    "scripts": {
+        "knex": "knex",
+        "start": "node src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Kudakwashe Mupeni",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "knex": "^0.20.2",
+        "objection": "^1.6.11",
+        "objection-guid": "^3.0.2",
+        "sqlite3": "^4.1.0"
+    }
 }

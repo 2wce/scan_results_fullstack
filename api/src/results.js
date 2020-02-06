@@ -12,7 +12,10 @@ router.get('/results', (req, res) => {
 
 // get result by id
 router.get('/results/:id', (req, res) => {
+    // get id from params in request
     let id = req.params.id
+
+    // run query and get result
     Result.query()
         .where('id', id)
         .then(result => {
@@ -22,10 +25,11 @@ router.get('/results/:id', (req, res) => {
 
 // get create new result
 router.post('/results/create', (req, res) => {
-    const result = req.body;
+    // get input from body in request
+    const input = req.body
 
     Result.query()
-        .insert({ ...result })
+        .insert({ ...input })
         .then(result => {
             res.json(result)
         })
@@ -33,10 +37,12 @@ router.post('/results/create', (req, res) => {
 
 // delete result
 router.post('/results/:id', (req, res) => {
+    // get id from params in request
     let id = req.params.id
 
+    // run query and delete specific result
     Result.query()
-        .deleteById(null)
+        .deleteById(id)
         .then(result => {
             res.json(result)
         })
